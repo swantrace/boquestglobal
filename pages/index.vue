@@ -79,7 +79,6 @@
   import Footer from '../components/core/Footer';
 
   export default {
-    middleware: ['password-protect'],
     components: {
       HomePageSectionWrapper,
       NormalPageSectionWrapper,

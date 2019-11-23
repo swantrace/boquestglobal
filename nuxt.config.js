@@ -56,8 +56,8 @@ export default {
   axios: {},
   passwordProtect: {
     formPath: '/password',
-    password: 'hello-world',
-    tokenSeed: 0101010,
+    password: '75yH3eWH4c4yWbU',
+    tokenSeed: 'aabbcc',
     queryString: '_pw',
     cookieName: '_password',
     cookie: {
@@ -73,5 +73,8 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  router: {
+    middleware: ['password-protect']
   }
 }
