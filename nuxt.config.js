@@ -46,13 +46,25 @@ export default {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'nuxt-password-protect'
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+  passwordProtect: {
+    formPath: '/password',
+    password: 'hello-world',
+    tokenSeed: 0101010,
+    queryString: '_pw',
+    cookieName: '_password',
+    cookie: {
+      prefix: '',
+      expires: 5
+    }
+  },
   /*
    ** Build configuration
    */
