@@ -1,0 +1,50 @@
+@font-face {
+	font-family:"GothamBold";
+	src:url("../fonts/GothamBold.woff");
+}
+
+@font-face {
+	font-family:"LegacySerifBook";
+	src:url("../fonts/LegacySerifBook.woff");
+}
+
+@font-face {
+	font-family:"LegacySerifMedium";
+	src:url("../fonts/LegacySerifMedium.woff");
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+@media only screen and (min-width: 959px) {
+  body {
+		height: 100vh;
+  }
+}
+
+body {
+	font-family:LegacySerifMedium, serif;
+}
+
+.wp-block-columns {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.wp-block-column {
+	flex:1 1 50%;
+	min-width: 300px;
+	margin-top: 20px;
+}
+
+.wp-block-column>*{
+	width: 90%;
+	color: #616466;
+}
+
+p {
+	color: #616466;
+}
