@@ -77,7 +77,16 @@ export const state = () => ({
     'candidates',
     'blog',
     'contact_us'
-  ]
+  ],
+  chinese_social_banner:
+    '//wp.boquestglobal.com/wp-content/uploads/2019/11/chinese_social_banner-scaled.jpg',
+  english_social_banner:
+    '//wp.boquestglobal.com/wp-content/uploads/2019/11/english_social_banner-scaled.jpg',
+  chinese_logo:
+    '//wp.boquestglobal.com/wp-content/uploads/2019/11/chinese_logo-scaled.jpg',
+  english_logo:
+    '//wp.boquestglobal.com/wp-content/uploads/2019/11/english_logo-scaled.jpg',
+  wechat_qr_code: '//wp.boquestglobal.com/wp-content/uploads/2019/11/wechat.jpg'
 })
 
 export const mutations = {

@@ -3,12 +3,15 @@
       paddingTop: $vuetify.breakpoint.mdAndUp ? '93px' : '',
       backgroundImage: 'url(' + `${sections[currentSectionName].background_image_url}` + ')',
       backgroundRepeat:'repeat',
-      minHeight: 'calc(100vh - 72px)'
+      minHeight: 'calc(100vh - 72px)',
+      backgroundSize:'cover',
+      backgroundPosition: 'center'
     }" :class="`${currentSectionName}_container`">
     <v-row align-center>
       <v-col>
         <v-card flat v-on:click.native="setSection('home')" v-if="!$vuetify.breakpoint.mdAndUp">
-          <v-img :src="require(`@/assets/imgs/${currentLanguageName}_social_banner.jpg`)" width="auto"></v-img>
+          <v-img v-if="currentLanguageName == 'english'" :src="english_social_banner" width="auto"></v-img>
+          <v-img v-if="currentLanguageName == 'chinese'" :src="chinese_social_banner" width="auto"></v-img>
         </v-card>
         <v-slide-x-transition hide-on-leave>
           <HomePageSectionWrapper 
@@ -143,7 +146,9 @@
         'currentSectionName',
         'language_names',
         'currentLanguageName',
-        'footerIsShow'
+        'footerIsShow',
+        'english_social_banner',
+        'chinese_social_banner'
       ])
     },
 

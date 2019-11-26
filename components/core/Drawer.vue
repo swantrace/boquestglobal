@@ -13,7 +13,8 @@
     >
       <v-list-item class="justify-center">
         <v-card flat v-on:click.native="setSection('home')">
-          <v-img :src="require(`@/assets/imgs/${currentLanguageName}_logo.jpg`)" width="auto"></v-img>
+          <v-img v-if="currentLanguageName == 'english'" :src="english_logo" width="auto"></v-img>
+          <v-img v-if="currentLanguageName == 'chinese'" :src="chinese_logo" width="auto"></v-img>
         </v-card>
       </v-list-item>
       <v-list-item
@@ -60,7 +61,9 @@ import { mapMutations, mapState } from 'vuex';
         'currentLanguageName', 
         'currentSectionName', 
         'language_names',
-        'sections'
+        'sections',
+        'chinese_logo',
+        'english_logo'
       ])
     },
 

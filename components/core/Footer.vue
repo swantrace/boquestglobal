@@ -61,7 +61,7 @@
         <v-img
             height="200"
             width="200"
-            :src="require(`@/assets/imgs/wechat.jpg`)"
+            :src="wechat_qr_code"
         ></v-img>
       </v-card>
     </v-dialog>
@@ -118,7 +118,7 @@
       wechatQRCodeOpened: false
     }),
     computed: {
-      ...mapState(["footerIsShow"])
+      ...mapState(["footerIsShow", "wechat_qr_code"])
     },
     methods: {
       redirect_to: function(url) {
