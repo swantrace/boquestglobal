@@ -20,8 +20,8 @@
       </v-list-item>
       <v-list-item>
         <v-btn-toggle dark dense mandatory background="transparent">
-          <v-btn class="language-option" small @click="setLanguage('english')">{{language_names[currentLanguageName].english}}</v-btn>
-          <v-btn class="language-option" small @click="setLanguage('chinese')">{{language_names[currentLanguageName].chinese}}</v-btn>
+          <v-btn class="language-option" small @click="setLanguage('english');hideDrawer()">{{language_names[currentLanguageName].english}}</v-btn>
+          <v-btn class="language-option" small @click="setLanguage('chinese');hideDrawer()">{{language_names[currentLanguageName].chinese}}</v-btn>
         </v-btn-toggle>
       </v-list-item>
     </v-list>

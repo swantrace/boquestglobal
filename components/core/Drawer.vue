@@ -25,8 +25,8 @@
       </v-list-item>
       <v-list-item class="justify-center">
         <v-btn-toggle dark dense mandatory background="transparent">
-          <v-btn class="language-option" small @click="setLanguage('english')">{{language_names[currentLanguageName].english}}</v-btn>
-          <v-btn class="language-option" small @click="setLanguage('chinese')">{{language_names[currentLanguageName].chinese}}</v-btn>
+          <v-btn class="language-option" small @click="setLanguage('english');hideDrawer()">{{language_names[currentLanguageName].english}}</v-btn>
+          <v-btn class="language-option" small @click="setLanguage('chinese');hideDrawer()">{{language_names[currentLanguageName].chinese}}</v-btn>
         </v-btn-toggle>
       </v-list-item>
     </v-list>
@@ -44,7 +44,7 @@
 }
 </style>
 <script>
-import Logo from './Logo';
+
 import { mapMutations, mapState } from 'vuex';
   
   export default {
@@ -67,7 +67,8 @@ import { mapMutations, mapState } from 'vuex';
     methods: {
       ...mapMutations([
         'setSection',
-        'setLanguage'
+        'setLanguage',
+        'hideDrawer'
       ]),
       menuItemClickHandler(name) {
         this.setSection(name);

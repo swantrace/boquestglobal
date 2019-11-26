@@ -7,6 +7,9 @@
     }" :class="`${currentSectionName}_container`">
     <v-row align-center>
       <v-col>
+        <v-card flat v-on:click.native="setSection('home')" v-if="!$vuetify.breakpoint.mdAndUp">
+          <v-img :src="require(`@/assets/imgs/${currentLanguageName}_social_banner.jpg`)" width="auto"></v-img>
+        </v-card>
         <v-slide-x-transition hide-on-leave>
           <HomePageSectionWrapper 
             v-if="currentSectionName==='home'"
