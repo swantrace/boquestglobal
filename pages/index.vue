@@ -92,8 +92,9 @@
       PrivacyPolicySectionWrapper,
       Footer
     },
-    fetch ({$axios, store}) {
+    async fetch ({$axios, store}) {
       return $axios.$get('http://wp.boquestglobal.com/wp-json/acf/v3/pages/5461')
+      // return Promise.resolve(data)
       .then(function(result) {
         return result.acf;
       })

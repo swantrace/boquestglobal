@@ -1,3 +1,4 @@
+import axios from 'axios'
 export default {
   mode: 'universal',
   /*
@@ -77,5 +78,19 @@ export default {
   },
   router: {
     middleware: ['password-protect']
+  },
+  generate: {
+    routes() {
+      return axios
+        .get('http://wp.boquestglobal.com/wp-json/acf/v3/pages/5461')
+        .then(res => {
+          return [
+            {
+              route: '/',
+              payload: res.acf
+            }
+          ]
+        })
+    }
   }
 }

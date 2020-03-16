@@ -27,7 +27,7 @@ export default {
         ? css.replace(/[\r\n|\r|\n]/g, '')
         : css
     },
-    customProperties: true
-    //themeCache
+    customProperties: true,
+    themeCache
   }
 }

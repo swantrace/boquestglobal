@@ -3,7 +3,7 @@
     <v-row>
       <v-col md="9" style="background-color: rgba(256, 256, 256, 0.8);">
         <SectionHeader>{{pageTitle}}</SectionHeader>
-        <div v-html="pageContent" />
+        <main v-html="pageContent" />
       </v-col>
     </v-row>
   </v-container>
